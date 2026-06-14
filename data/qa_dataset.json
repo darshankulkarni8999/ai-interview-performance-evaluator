@@ -1,0 +1,1228 @@
+[
+  {
+    "skill": "Python",
+    "question": "What is the difference between a list and a tuple in Python?",
+    "ideal_answer": "Lists are mutable, meaning we can change, add, or remove elements after creation, while tuples are immutable and cannot be changed once created. Lists use square brackets and tuples use parentheses. Because tuples are immutable, they are generally faster and use less memory than lists. Tuples are often used for fixed collections of items, like coordinates, while lists are used for collections that may change.",
+    "key_concepts": [
+      "mutable",
+      "immutable",
+      "list",
+      "tuple",
+      "memory"
+    ]
+  },
+  {
+    "skill": "Python",
+    "question": "What are Python's main data types?",
+    "ideal_answer": "Python has several built-in data types including int for whole numbers, float for decimal numbers, str for text, bool for True/False values, and complex for complex numbers. It also has collection types like list, tuple, set, and dict. Each type has its own methods and use cases depending on whether we need ordered, unordered, mutable, or immutable storage.",
+    "key_concepts": [
+      "int",
+      "float",
+      "str",
+      "list",
+      "dict",
+      "tuple",
+      "set"
+    ]
+  },
+  {
+    "skill": "Python",
+    "question": "What is the difference between '==' and 'is' in Python?",
+    "ideal_answer": "The '==' operator checks if two objects have the same value, while 'is' checks if two objects refer to the exact same memory location, meaning they are the same object. For example, two different lists with the same elements would be equal using '==' but 'is' would return False because they are different objects in memory. 'is' is mainly used to compare with None.",
+    "key_concepts": [
+      "equality",
+      "identity",
+      "memory",
+      "value",
+      "None"
+    ]
+  },
+  {
+    "skill": "Python",
+    "question": "What are Python decorators?",
+    "ideal_answer": "A decorator is a function that takes another function as input and extends or modifies its behavior without changing its actual code. Decorators are applied using the '@' symbol above a function definition. They are commonly used for logging, authentication checks, timing functions, or caching results. Internally, decorators work because functions in Python are first-class objects that can be passed around like variables.",
+    "key_concepts": [
+      "function",
+      "@ symbol",
+      "modify behavior",
+      "first-class",
+      "wrapper"
+    ]
+  },
+  {
+    "skill": "Python",
+    "question": "Explain list comprehension with an example.",
+    "ideal_answer": "List comprehension is a concise way to create lists in a single line of code instead of using a for loop with append. For example, to get squares of numbers from 1 to 5, instead of writing a loop, we can write 'squares = [x*x for x in range(1, 6)]'. It can also include conditions, like filtering only even numbers using an if statement inside the brackets. It makes code shorter and often faster to execute.",
+    "key_concepts": [
+      "concise",
+      "for loop",
+      "single line",
+      "square brackets",
+      "condition"
+    ]
+  },
+  {
+    "skill": "Python",
+    "question": "What is the difference between a shallow copy and a deep copy?",
+    "ideal_answer": "A shallow copy creates a new object but copies references to the nested objects inside it, so changes to nested objects affect both copies. A deep copy creates a completely independent copy, including all nested objects, so changes to one do not affect the other. In Python, we use the copy module, where copy.copy() does a shallow copy and copy.deepcopy() does a deep copy. This matters mainly when working with nested lists or dictionaries.",
+    "key_concepts": [
+      "shallow copy",
+      "deep copy",
+      "nested objects",
+      "copy module",
+      "independent"
+    ]
+  },
+  {
+    "skill": "Python",
+    "question": "What are *args and **kwargs used for?",
+    "ideal_answer": "*args and **kwargs allow a function to accept a variable number of arguments. *args collects extra positional arguments into a tuple, while **kwargs collects extra keyword arguments into a dictionary. This is useful when we don't know in advance how many arguments will be passed to a function, such as in wrapper functions or when building flexible APIs.",
+    "key_concepts": [
+      "variable arguments",
+      "positional",
+      "keyword arguments",
+      "tuple",
+      "dictionary"
+    ]
+  },
+  {
+    "skill": "Python",
+    "question": "What is the Global Interpreter Lock (GIL) in Python?",
+    "ideal_answer": "The GIL is a mutex, or lock, that allows only one thread to execute Python bytecode at a time, even on multi-core processors. This means true parallel execution of threads isn't possible in CPython for CPU-bound tasks. However, it doesn't affect I/O-bound tasks much since the GIL is released during I/O operations. For CPU-heavy parallel work, developers often use multiprocessing instead of multithreading to bypass the GIL.",
+    "key_concepts": [
+      "mutex",
+      "single thread",
+      "CPython",
+      "multiprocessing",
+      "I/O-bound"
+    ]
+  },
+  {
+    "skill": "Python",
+    "question": "What is exception handling and how is it done in Python?",
+    "ideal_answer": "Exception handling is a way to deal with errors that occur during program execution without crashing the program. In Python, we use try and except blocks: code that might raise an error goes in the try block, and the code to handle the error goes in the except block. We can also use finally to run cleanup code regardless of whether an error occurred, and raise to manually trigger an exception.",
+    "key_concepts": [
+      "try",
+      "except",
+      "error",
+      "finally",
+      "raise"
+    ]
+  },
+  {
+    "skill": "Python",
+    "question": "What is the difference between a function and a method in Python?",
+    "ideal_answer": "A function is a block of reusable code defined independently using the def keyword, and it can be called on its own. A method is similar but is defined inside a class and is associated with an object of that class, so it's called using the object, like object.method(). Methods automatically receive the instance itself as the first argument, usually called 'self'.",
+    "key_concepts": [
+      "function",
+      "method",
+      "class",
+      "object",
+      "self"
+    ]
+  },
+  {
+    "skill": "Python",
+    "question": "What are Python generators and why are they useful?",
+    "ideal_answer": "A generator is a special type of function that returns an iterator and produces values one at a time using the yield keyword instead of returning all values at once. This makes generators memory-efficient because they don't store the entire sequence in memory, generating each value only when needed. They are useful for working with large datasets or infinite sequences, like reading large files line by line.",
+    "key_concepts": [
+      "yield",
+      "iterator",
+      "memory-efficient",
+      "lazy evaluation",
+      "large datasets"
+    ]
+  },
+  {
+    "skill": "Python",
+    "question": "What is the difference between a set and a dictionary in Python?",
+    "ideal_answer": "A set is an unordered collection of unique elements, used mainly to store distinct values and perform operations like union or intersection. A dictionary stores data as key-value pairs, where each key is unique and maps to a value, allowing fast lookups by key. While both use curly braces, a set just has values like {1, 2, 3}, whereas a dictionary has pairs like {'a': 1, 'b': 2}.",
+    "key_concepts": [
+      "unordered",
+      "unique",
+      "key-value",
+      "set",
+      "dictionary"
+    ]
+  },
+  {
+    "skill": "Python",
+    "question": "What is the use of the 'with' statement in Python?",
+    "ideal_answer": "The 'with' statement is used for resource management, most commonly when working with files. It automatically takes care of opening and closing the resource, even if an error occurs during the operations, which prevents resource leaks. For example, 'with open('file.txt') as f' ensures the file is properly closed after the block of code finishes, without needing to explicitly call f.close().",
+    "key_concepts": [
+      "resource management",
+      "file handling",
+      "automatically closes",
+      "context manager",
+      "error"
+    ]
+  },
+  {
+    "skill": "Python",
+    "question": "What is a lambda function in Python?",
+    "ideal_answer": "A lambda function is a small, anonymous function defined using the lambda keyword instead of def, and it can have any number of arguments but only one expression. They are typically used for short, simple operations, often passed as arguments to functions like map(), filter(), or sorted(). For example, 'lambda x: x*2' is a function that doubles a number, written without naming it.",
+    "key_concepts": [
+      "anonymous",
+      "lambda keyword",
+      "single expression",
+      "map",
+      "filter"
+    ]
+  },
+  {
+    "skill": "Python",
+    "question": "How does Python manage memory?",
+    "ideal_answer": "Python manages memory automatically through a private heap space where all objects and data structures are stored. It uses a built-in garbage collector that automatically frees memory occupied by objects that are no longer referenced, mainly using reference counting along with cycle detection for circular references. Developers usually don't need to manually allocate or free memory like in languages such as C.",
+    "key_concepts": [
+      "heap",
+      "garbage collector",
+      "reference counting",
+      "automatic",
+      "circular references"
+    ]
+  },
+  {
+    "skill": "Python",
+    "question": "What is the difference between deep learning libraries like TensorFlow/PyTorch and traditional Python loops for numerical computation?",
+    "ideal_answer": "Traditional Python loops process data element by element, which is slow for large datasets due to Python's interpreted nature. Libraries like TensorFlow and PyTorch, similar to NumPy, perform vectorized operations using optimized C/C++ code under the hood and can run computations on GPUs, making them dramatically faster for numerical and matrix operations common in machine learning. They also provide automatic differentiation, which is essential for training neural networks.",
+    "key_concepts": [
+      "vectorized",
+      "GPU",
+      "performance",
+      "automatic differentiation",
+      "loops"
+    ]
+  },
+  {
+    "skill": "Java",
+    "question": "Explain the four main OOP concepts in Java.",
+    "ideal_answer": "The four main OOP concepts are encapsulation, inheritance, polymorphism, and abstraction. Encapsulation means bundling data and methods together and restricting direct access using private fields with getters and setters. Inheritance allows a class to acquire properties and behaviors of another class using the extends keyword. Polymorphism allows the same method to behave differently based on the object, through method overriding or overloading. Abstraction means hiding implementation details and showing only essential features, often using abstract classes or interfaces.",
+    "key_concepts": [
+      "encapsulation",
+      "inheritance",
+      "polymorphism",
+      "abstraction",
+      "interface"
+    ]
+  },
+  {
+    "skill": "Java",
+    "question": "What is the difference between method overloading and method overriding?",
+    "ideal_answer": "Method overloading happens when multiple methods in the same class have the same name but different parameters, like different number or types of arguments, and is resolved at compile time. Method overriding happens when a subclass provides its own implementation of a method that already exists in its parent class, with the same name and parameters, and is resolved at runtime. Overloading is about having multiple versions of a method, while overriding is about replacing a parent's method behavior.",
+    "key_concepts": [
+      "overloading",
+      "overriding",
+      "compile time",
+      "runtime",
+      "subclass"
+    ]
+  },
+  {
+    "skill": "Java",
+    "question": "What is the difference between an abstract class and an interface in Java?",
+    "ideal_answer": "An abstract class can have both abstract methods (without implementation) and regular methods (with implementation), and a class can extend only one abstract class. An interface traditionally contains only method declarations without implementation (though modern Java allows default methods), and a class can implement multiple interfaces. Abstract classes are used when classes share common code, while interfaces are used to define a contract that multiple unrelated classes can follow.",
+    "key_concepts": [
+      "abstract class",
+      "interface",
+      "multiple inheritance",
+      "implementation",
+      "contract"
+    ]
+  },
+  {
+    "skill": "Java",
+    "question": "What is the difference between '==' and '.equals()' in Java?",
+    "ideal_answer": "The '==' operator compares references for objects, checking if two variables point to the same memory location, but for primitive types it compares actual values. The '.equals()' method, on the other hand, is used to compare the actual content or value of two objects, and its behavior can be customized by overriding it in a class. For example, two different String objects with the same text would be equal using '.equals()' but not necessarily using '=='.",
+    "key_concepts": [
+      "reference",
+      "equals method",
+      "memory location",
+      "value comparison",
+      "objects"
+    ]
+  },
+  {
+    "skill": "Java",
+    "question": "What is a constructor in Java?",
+    "ideal_answer": "A constructor is a special method used to initialize objects when they are created. It has the same name as the class and does not have a return type. Java provides a default constructor automatically if none is defined, but developers can create their own constructors, including parameterized ones that accept arguments to set initial values for object fields. Constructors can also be overloaded to provide multiple ways of creating an object.",
+    "key_concepts": [
+      "initialize",
+      "same name as class",
+      "no return type",
+      "default constructor",
+      "overloaded"
+    ]
+  },
+  {
+    "skill": "Java",
+    "question": "What is the difference between checked and unchecked exceptions in Java?",
+    "ideal_answer": "Checked exceptions are exceptions that the compiler forces you to handle, either using a try-catch block or by declaring them with the 'throws' keyword, such as IOException. Unchecked exceptions, like NullPointerException or ArithmeticException, are not checked at compile time and usually represent programming errors that could have been avoided. Checked exceptions extend Exception, while unchecked exceptions extend RuntimeException.",
+    "key_concepts": [
+      "checked exception",
+      "unchecked exception",
+      "compile time",
+      "RuntimeException",
+      "try-catch"
+    ]
+  },
+  {
+    "skill": "Java",
+    "question": "What is the use of the 'static' keyword in Java?",
+    "ideal_answer": "The 'static' keyword means a member belongs to the class itself rather than to any specific object. A static variable is shared across all instances of a class, so changing it in one place affects it everywhere. A static method can be called without creating an object of the class, using the class name directly. Static members are loaded into memory only once when the class is loaded, making them useful for constants and utility methods.",
+    "key_concepts": [
+      "class level",
+      "shared",
+      "no object needed",
+      "static variable",
+      "static method"
+    ]
+  },
+  {
+    "skill": "Java",
+    "question": "What is the Java Virtual Machine (JVM) and why is it important?",
+    "ideal_answer": "The JVM is a virtual machine that allows Java programs to run on any device or operating system, achieving Java's 'write once, run anywhere' principle. When Java code is compiled, it produces bytecode, which the JVM then interprets or compiles into native machine code for the specific platform. The JVM also handles memory management, including garbage collection, and provides security features like sandboxing.",
+    "key_concepts": [
+      "bytecode",
+      "platform independent",
+      "garbage collection",
+      "write once run anywhere",
+      "memory management"
+    ]
+  },
+  {
+    "skill": "Java",
+    "question": "What is the difference between an array and an ArrayList in Java?",
+    "ideal_answer": "An array has a fixed size that must be defined when it's created and cannot be changed afterward, and it can hold both primitive types and objects. An ArrayList is part of Java's collections framework, can dynamically grow or shrink in size, but can only hold objects, not primitives directly (though autoboxing handles this automatically). ArrayLists also provide many built-in methods like add, remove, and contains, making them more flexible than arrays.",
+    "key_concepts": [
+      "fixed size",
+      "dynamic size",
+      "collections framework",
+      "primitives",
+      "flexible"
+    ]
+  },
+  {
+    "skill": "Java",
+    "question": "What is exception handling in Java and how does try-catch-finally work?",
+    "ideal_answer": "Exception handling in Java is a mechanism to handle runtime errors so that the normal flow of the program isn't disrupted. Code that might throw an exception is placed inside a try block, and code to handle that specific exception goes in a catch block, which can be written multiple times for different exception types. The finally block contains code that always executes, whether or not an exception occurred, commonly used for cleanup tasks like closing files or database connections.",
+    "key_concepts": [
+      "try",
+      "catch",
+      "finally",
+      "runtime errors",
+      "cleanup"
+    ]
+  },
+  {
+    "skill": "Java",
+    "question": "What is the difference between String, StringBuilder, and StringBuffer in Java?",
+    "ideal_answer": "String in Java is immutable, meaning every time we modify a string, a new object is created in memory, which can be inefficient for many modifications. StringBuilder is mutable and allows efficient string modifications, but it is not thread-safe, making it suitable for single-threaded scenarios. StringBuffer is also mutable like StringBuilder but is thread-safe due to synchronized methods, making it slightly slower but safe for multi-threaded use.",
+    "key_concepts": [
+      "immutable",
+      "mutable",
+      "thread-safe",
+      "StringBuilder",
+      "StringBuffer"
+    ]
+  },
+  {
+    "skill": "Java",
+    "question": "What is multithreading and why is it used in Java?",
+    "ideal_answer": "Multithreading is the ability to execute multiple parts of a program, called threads, concurrently to make better use of CPU resources. In Java, this can be achieved by extending the Thread class or implementing the Runnable interface. It is used to improve application performance, especially for tasks that can run independently, such as handling multiple user requests in a server or performing background tasks without freezing the main program.",
+    "key_concepts": [
+      "threads",
+      "concurrent",
+      "Runnable",
+      "Thread class",
+      "performance"
+    ]
+  },
+  {
+    "skill": "Java",
+    "question": "What are access modifiers in Java?",
+    "ideal_answer": "Access modifiers control the visibility or accessibility of classes, methods, and variables. 'public' means accessible from anywhere, 'private' means accessible only within the same class, 'protected' means accessible within the same package and by subclasses, and the default modifier, when none is specified, means accessible only within the same package. These modifiers support the OOP principle of encapsulation by controlling how data is accessed.",
+    "key_concepts": [
+      "public",
+      "private",
+      "protected",
+      "encapsulation",
+      "visibility"
+    ]
+  },
+  {
+    "skill": "Java",
+    "question": "What is the difference between final, finally, and finalize in Java?",
+    "ideal_answer": "'final' is a keyword used to declare constants, prevent method overriding, or prevent class inheritance, depending on where it's applied. 'finally' is a block used with try-catch that always executes regardless of whether an exception occurred, typically for cleanup. 'finalize' is a method that was called by the garbage collector before an object is destroyed, though its use is now discouraged in modern Java in favor of other cleanup mechanisms.",
+    "key_concepts": [
+      "final keyword",
+      "finally block",
+      "finalize method",
+      "constant",
+      "garbage collector"
+    ]
+  },
+  {
+    "skill": "SQL",
+    "question": "What is the difference between SQL's WHERE and HAVING clauses?",
+    "ideal_answer": "The WHERE clause is used to filter individual rows before any grouping happens, and it cannot be used with aggregate functions like SUM or COUNT directly. The HAVING clause is used to filter groups after the GROUP BY clause has been applied, and it can work with aggregate functions. For example, to find departments with more than 5 employees, we'd use GROUP BY on department and HAVING COUNT(*) > 5.",
+    "key_concepts": [
+      "WHERE",
+      "HAVING",
+      "GROUP BY",
+      "aggregate functions",
+      "filter"
+    ]
+  },
+  {
+    "skill": "SQL",
+    "question": "What are the different types of JOINs in SQL?",
+    "ideal_answer": "INNER JOIN returns only the rows that have matching values in both tables. LEFT JOIN returns all rows from the left table and matched rows from the right table, with NULLs where there's no match. RIGHT JOIN does the opposite, returning all rows from the right table. FULL OUTER JOIN returns all rows from both tables, with NULLs where there's no match on either side. These are used to combine data from multiple related tables based on common columns.",
+    "key_concepts": [
+      "INNER JOIN",
+      "LEFT JOIN",
+      "RIGHT JOIN",
+      "FULL OUTER JOIN",
+      "matching"
+    ]
+  },
+  {
+    "skill": "SQL",
+    "question": "What is a primary key and a foreign key?",
+    "ideal_answer": "A primary key is a column or set of columns that uniquely identifies each row in a table, and it cannot contain NULL values or duplicates. A foreign key is a column in one table that refers to the primary key of another table, establishing a relationship between the two tables. Foreign keys help maintain referential integrity, ensuring that relationships between tables remain consistent.",
+    "key_concepts": [
+      "primary key",
+      "foreign key",
+      "unique",
+      "relationship",
+      "referential integrity"
+    ]
+  },
+  {
+    "skill": "SQL",
+    "question": "What is the difference between DELETE, TRUNCATE, and DROP in SQL?",
+    "ideal_answer": "DELETE removes specific rows from a table based on a condition and can be rolled back, but it's slower because it logs each row deletion. TRUNCATE removes all rows from a table quickly without logging individual row deletions, but the table structure remains. DROP completely removes the table itself, including its structure, data, and any indexes or constraints associated with it, from the database.",
+    "key_concepts": [
+      "DELETE",
+      "TRUNCATE",
+      "DROP",
+      "rows",
+      "table structure"
+    ]
+  },
+  {
+    "skill": "SQL",
+    "question": "What is normalization in databases?",
+    "ideal_answer": "Normalization is the process of organizing data in a database to reduce redundancy and improve data integrity, typically by dividing large tables into smaller, related tables. It follows a series of rules called normal forms, like 1NF, 2NF, and 3NF, each addressing specific types of redundancy. For example, 1NF ensures atomic values in columns, while 3NF removes transitive dependencies, helping avoid issues like duplicate data and inconsistent updates.",
+    "key_concepts": [
+      "redundancy",
+      "normal forms",
+      "1NF",
+      "2NF",
+      "data integrity"
+    ]
+  },
+  {
+    "skill": "SQL",
+    "question": "What is an SQL index and why is it used?",
+    "ideal_answer": "An index is a database object that improves the speed of data retrieval operations on a table by creating a data structure, often a B-tree, that allows faster lookups. Without an index, the database has to scan the entire table to find matching rows, which is slow for large tables. However, indexes also add overhead during insert, update, and delete operations since the index needs to be updated too, so they should be used thoughtfully on frequently queried columns.",
+    "key_concepts": [
+      "data retrieval",
+      "B-tree",
+      "faster lookups",
+      "overhead",
+      "query performance"
+    ]
+  },
+  {
+    "skill": "SQL",
+    "question": "What is the difference between GROUP BY and ORDER BY?",
+    "ideal_answer": "GROUP BY is used to group rows that have the same values in specified columns, usually combined with aggregate functions like COUNT, SUM, or AVG to perform calculations on each group. ORDER BY is used to sort the result set in ascending or descending order based on one or more columns, and doesn't change how rows are grouped. GROUP BY changes the structure of results into summary rows, while ORDER BY just changes the order of existing rows.",
+    "key_concepts": [
+      "GROUP BY",
+      "ORDER BY",
+      "aggregate",
+      "sort",
+      "grouping"
+    ]
+  },
+  {
+    "skill": "SQL",
+    "question": "What is a subquery in SQL?",
+    "ideal_answer": "A subquery is a query nested inside another query, often used to perform an operation that requires multiple steps. It can be placed in the SELECT, FROM, or WHERE clause of the main query. For example, to find employees who earn more than the average salary, we could use a subquery that calculates the average salary inside the WHERE clause of the main query that selects employees.",
+    "key_concepts": [
+      "nested query",
+      "SELECT",
+      "WHERE clause",
+      "main query",
+      "multiple steps"
+    ]
+  },
+  {
+    "skill": "SQL",
+    "question": "What are SQL constraints? Name a few examples.",
+    "ideal_answer": "Constraints are rules applied to columns in a table to enforce data integrity and ensure valid data is stored. Common constraints include NOT NULL, which prevents a column from having empty values, UNIQUE, which ensures all values in a column are different, PRIMARY KEY, which uniquely identifies rows, FOREIGN KEY, which maintains relationships between tables, and CHECK, which ensures values meet a specific condition, like age being greater than zero.",
+    "key_concepts": [
+      "NOT NULL",
+      "UNIQUE",
+      "PRIMARY KEY",
+      "FOREIGN KEY",
+      "CHECK"
+    ]
+  },
+  {
+    "skill": "SQL",
+    "question": "What is the difference between UNION and UNION ALL?",
+    "ideal_answer": "UNION combines the results of two or more SELECT statements and removes duplicate rows from the combined result, which requires extra processing. UNION ALL also combines results but keeps all rows, including duplicates, making it faster since it doesn't need to check for and remove duplicates. Both require the SELECT statements to have the same number of columns with compatible data types.",
+    "key_concepts": [
+      "UNION",
+      "UNION ALL",
+      "duplicates",
+      "combine results",
+      "SELECT statements"
+    ]
+  },
+  {
+    "skill": "SQL",
+    "question": "What is a transaction in SQL and what does ACID stand for?",
+    "ideal_answer": "A transaction is a sequence of one or more SQL operations that are executed as a single unit, either all succeeding or all failing together. ACID stands for Atomicity, meaning all operations complete or none do; Consistency, meaning the database remains in a valid state before and after; Isolation, meaning concurrent transactions don't interfere with each other; and Durability, meaning once committed, changes are permanent even after a system failure.",
+    "key_concepts": [
+      "transaction",
+      "Atomicity",
+      "Consistency",
+      "Isolation",
+      "Durability"
+    ]
+  },
+  {
+    "skill": "SQL",
+    "question": "What is the difference between a clustered and a non-clustered index?",
+    "ideal_answer": "A clustered index determines the physical order in which data is stored in a table, so a table can have only one clustered index, usually on the primary key. A non-clustered index creates a separate structure that points to the actual data rows, allowing multiple non-clustered indexes per table. Clustered indexes are generally faster for range queries since data is physically sorted, while non-clustered indexes add an extra lookup step.",
+    "key_concepts": [
+      "clustered index",
+      "non-clustered index",
+      "physical order",
+      "primary key",
+      "lookup"
+    ]
+  },
+  {
+    "skill": "SQL",
+    "question": "What is the use of GROUP_CONCAT or similar aggregate string functions?",
+    "ideal_answer": "GROUP_CONCAT, available in databases like MySQL, is used to concatenate values from multiple rows in a group into a single string, usually separated by commas. For example, if a table has students and their courses, we could use GROUP_CONCAT to list all courses for each student in a single row instead of multiple rows. Different databases have similar functions, like STRING_AGG in PostgreSQL and SQL Server.",
+    "key_concepts": [
+      "GROUP_CONCAT",
+      "concatenate",
+      "aggregate function",
+      "single string",
+      "grouping"
+    ]
+  },
+  {
+    "skill": "SQL",
+    "question": "What is the difference between a view and a table in SQL?",
+    "ideal_answer": "A table is a physical structure that actually stores data on disk, with rows and columns. A view is a virtual table based on the result of a stored SQL query, and it doesn't store data itself but displays data from one or more underlying tables. Views are useful for simplifying complex queries, restricting access to specific columns, or presenting data in a customized way without duplicating storage.",
+    "key_concepts": [
+      "view",
+      "table",
+      "virtual",
+      "stored query",
+      "underlying tables"
+    ]
+  },
+  {
+    "skill": "SQL",
+    "question": "What does the COALESCE function do in SQL?",
+    "ideal_answer": "COALESCE returns the first non-NULL value from a list of expressions provided as arguments. It's commonly used to provide a default value when a column might contain NULL. For example, COALESCE(phone_number, 'Not Provided') would return the actual phone number if it exists, or the text 'Not Provided' if the phone_number column is NULL for that row.",
+    "key_concepts": [
+      "COALESCE",
+      "NULL",
+      "default value",
+      "first non-null",
+      "expressions"
+    ]
+  },
+  {
+    "skill": "SQL",
+    "question": "How do you find duplicate records in a SQL table?",
+    "ideal_answer": "To find duplicate records, we typically use GROUP BY on the columns we want to check for duplicates, combined with HAVING COUNT(*) greater than 1. For example, to find duplicate email addresses in a users table, we'd group by email and filter groups having a count greater than one. This shows us which values appear more than once, helping identify and later remove duplicates.",
+    "key_concepts": [
+      "GROUP BY",
+      "HAVING",
+      "COUNT",
+      "duplicates",
+      "filter groups"
+    ]
+  },
+  {
+    "skill": "DBMS",
+    "question": "What is the difference between a database and a DBMS?",
+    "ideal_answer": "A database is an organized collection of data stored electronically, while a DBMS, or Database Management System, is the software that allows users to create, read, update, and manage that data. The DBMS acts as an interface between the database and users or applications, handling tasks like data security, concurrent access, and backup. Examples of DBMS include MySQL, PostgreSQL, and Oracle.",
+    "key_concepts": [
+      "database",
+      "DBMS",
+      "software",
+      "interface",
+      "manage data"
+    ]
+  },
+  {
+    "skill": "DBMS",
+    "question": "What is the difference between a primary key and a unique key?",
+    "ideal_answer": "A primary key uniquely identifies each record in a table and cannot contain NULL values, and a table can have only one primary key. A unique key also ensures all values in a column are different, but it can allow one NULL value (depending on the database), and a table can have multiple unique keys. Both enforce uniqueness, but the primary key is typically the main identifier for a table.",
+    "key_concepts": [
+      "primary key",
+      "unique key",
+      "NULL",
+      "uniqueness",
+      "identifier"
+    ]
+  },
+  {
+    "skill": "DBMS",
+    "question": "What are the different types of relationships in a database?",
+    "ideal_answer": "There are three main types of relationships: one-to-one, where one record in a table relates to exactly one record in another table, like a person and their passport; one-to-many, where one record relates to multiple records in another table, like a customer having multiple orders; and many-to-many, where multiple records in one table relate to multiple records in another, like students and courses, usually implemented using a junction table.",
+    "key_concepts": [
+      "one-to-one",
+      "one-to-many",
+      "many-to-many",
+      "junction table",
+      "relationships"
+    ]
+  },
+  {
+    "skill": "DBMS",
+    "question": "What is a deadlock in a database?",
+    "ideal_answer": "A deadlock occurs when two or more transactions are waiting for each other to release locks on resources, causing all of them to be stuck indefinitely. For example, Transaction A locks Row 1 and waits for Row 2, while Transaction B locks Row 2 and waits for Row 1. Database systems typically detect deadlocks automatically and resolve them by rolling back one of the transactions to allow the other to proceed.",
+    "key_concepts": [
+      "deadlock",
+      "transactions",
+      "locks",
+      "waiting",
+      "rollback"
+    ]
+  },
+  {
+    "skill": "DBMS",
+    "question": "What is the difference between OLTP and OLAP systems?",
+    "ideal_answer": "OLTP, or Online Transaction Processing, systems are designed for managing day-to-day transactional data, like banking systems or order processing, characterized by frequent small read/write operations. OLAP, or Online Analytical Processing, systems are designed for analyzing large volumes of historical data to support decision-making, often used in data warehouses with complex queries and aggregations. OLTP focuses on speed and consistency for transactions, while OLAP focuses on complex analysis.",
+    "key_concepts": [
+      "OLTP",
+      "OLAP",
+      "transactions",
+      "data warehouse",
+      "analysis"
+    ]
+  },
+  {
+    "skill": "DBMS",
+    "question": "What is denormalization and when would you use it?",
+    "ideal_answer": "Denormalization is the process of intentionally introducing redundancy into a database by combining tables or adding duplicate data, which is the opposite of normalization. It's used to improve read performance for reporting or analytics, where complex joins on normalized tables would be too slow. The trade-off is increased storage and a higher risk of data inconsistency, since the same data exists in multiple places.",
+    "key_concepts": [
+      "denormalization",
+      "redundancy",
+      "read performance",
+      "joins",
+      "trade-off"
+    ]
+  },
+  {
+    "skill": "Machine Learning",
+    "question": "What is the difference between supervised and unsupervised learning?",
+    "ideal_answer": "Supervised learning involves training a model on labeled data, where each input has a corresponding correct output, and the model learns to map inputs to outputs, like predicting house prices from features. Unsupervised learning works with unlabeled data, where the model tries to find hidden patterns or groupings on its own, such as clustering customers based on purchasing behavior without predefined categories. Supervised learning is used for prediction tasks, while unsupervised learning is used for discovering structure in data.",
+    "key_concepts": [
+      "labeled data",
+      "unlabeled data",
+      "prediction",
+      "clustering",
+      "patterns"
+    ]
+  },
+  {
+    "skill": "Machine Learning",
+    "question": "What is overfitting and how can it be prevented?",
+    "ideal_answer": "Overfitting happens when a model learns the training data too well, including its noise and outliers, leading to excellent performance on training data but poor performance on new, unseen data. It can be prevented using techniques like cross-validation to evaluate performance reliably, regularization methods like L1 or L2 to penalize complex models, gathering more training data, simplifying the model architecture, or using techniques like dropout in neural networks and early stopping during training.",
+    "key_concepts": [
+      "overfitting",
+      "training data",
+      "regularization",
+      "cross-validation",
+      "generalization"
+    ]
+  },
+  {
+    "skill": "Machine Learning",
+    "question": "Explain the bias-variance tradeoff.",
+    "ideal_answer": "Bias refers to errors from overly simplistic assumptions in a model, causing it to underfit and miss important patterns in the data. Variance refers to a model's sensitivity to small fluctuations in training data, causing it to overfit by capturing noise as if it were a real pattern. The tradeoff is that decreasing bias often increases variance and vice versa, so the goal is to find a balance where the model generalizes well to new data, minimizing total error.",
+    "key_concepts": [
+      "bias",
+      "variance",
+      "underfit",
+      "overfit",
+      "generalization"
+    ]
+  },
+  {
+    "skill": "Machine Learning",
+    "question": "What is the difference between classification and regression?",
+    "ideal_answer": "Classification is a type of supervised learning where the model predicts discrete categories or labels, such as whether an email is spam or not spam. Regression is also supervised learning, but it predicts continuous numerical values, such as predicting the price of a house or the temperature tomorrow. The difference lies in the type of output: classification gives a category, while regression gives a number.",
+    "key_concepts": [
+      "classification",
+      "regression",
+      "discrete",
+      "continuous",
+      "supervised learning"
+    ]
+  },
+  {
+    "skill": "Machine Learning",
+    "question": "What is cross-validation and why is it important?",
+    "ideal_answer": "Cross-validation is a technique for evaluating a model's performance by splitting the data into multiple subsets, or folds, and training and testing the model multiple times using different folds for testing each time. The most common form is k-fold cross-validation, where the average performance across all folds gives a more reliable estimate than a single train-test split. It's important because it reduces the chance of getting a misleadingly good or bad result due to how the data happened to be split.",
+    "key_concepts": [
+      "cross-validation",
+      "k-fold",
+      "train-test split",
+      "reliable estimate",
+      "performance"
+    ]
+  },
+  {
+    "skill": "Machine Learning",
+    "question": "What is feature engineering and why does it matter?",
+    "ideal_answer": "Feature engineering is the process of creating, transforming, or selecting input variables, called features, to improve a machine learning model's performance. This can include creating new features from existing ones, like extracting the day of the week from a date, encoding categorical variables into numbers, or scaling numerical features. It matters because the quality and relevance of features often have a bigger impact on model performance than the choice of algorithm itself.",
+    "key_concepts": [
+      "feature engineering",
+      "transform",
+      "encoding",
+      "scaling",
+      "model performance"
+    ]
+  },
+  {
+    "skill": "Machine Learning",
+    "question": "What is the difference between bagging and boosting?",
+    "ideal_answer": "Bagging, short for bootstrap aggregating, trains multiple models independently and in parallel on different random subsets of the data, then combines their predictions through averaging or voting, as seen in Random Forest. Boosting trains models sequentially, where each new model focuses on correcting the errors made by previous models, giving more weight to misclassified examples, as seen in algorithms like AdaBoost or Gradient Boosting. Bagging mainly reduces variance, while boosting reduces both bias and variance but can be more prone to overfitting.",
+    "key_concepts": [
+      "bagging",
+      "boosting",
+      "Random Forest",
+      "parallel",
+      "sequential"
+    ]
+  },
+  {
+    "skill": "Machine Learning",
+    "question": "What evaluation metrics would you use for a classification problem?",
+    "ideal_answer": "For classification problems, common metrics include accuracy, which is the percentage of correct predictions, but it can be misleading for imbalanced datasets. Precision measures how many predicted positives were actually correct, while recall measures how many actual positives were correctly identified. The F1-score balances precision and recall using their harmonic mean. A confusion matrix also helps visualize true positives, false positives, true negatives, and false negatives.",
+    "key_concepts": [
+      "accuracy",
+      "precision",
+      "recall",
+      "F1-score",
+      "confusion matrix"
+    ]
+  },
+  {
+    "skill": "Machine Learning",
+    "question": "What is gradient descent?",
+    "ideal_answer": "Gradient descent is an optimization algorithm used to minimize a model's error or loss function by iteratively adjusting its parameters, like weights, in the direction that reduces the loss the most. It calculates the gradient, or slope, of the loss function with respect to each parameter and updates the parameters by taking a step proportional to the negative gradient, scaled by a learning rate. This process repeats until the loss converges to a minimum value.",
+    "key_concepts": [
+      "optimization",
+      "loss function",
+      "gradient",
+      "learning rate",
+      "parameters"
+    ]
+  },
+  {
+    "skill": "Machine Learning",
+    "question": "What is the curse of dimensionality?",
+    "ideal_answer": "The curse of dimensionality refers to various problems that arise when working with data that has a very large number of features or dimensions. As dimensions increase, data points become sparse and distances between them become less meaningful, making algorithms like KNN less effective. It also increases computational cost and the risk of overfitting, since models need exponentially more data to maintain the same density as dimensions grow. Techniques like dimensionality reduction, such as PCA, are used to address this.",
+    "key_concepts": [
+      "dimensionality",
+      "sparse data",
+      "overfitting",
+      "PCA",
+      "high dimensions"
+    ]
+  },
+  {
+    "skill": "Machine Learning",
+    "question": "What is the difference between a parametric and a non-parametric model?",
+    "ideal_answer": "A parametric model assumes a fixed functional form with a limited number of parameters, regardless of how much training data is available, like Linear Regression with its weights and bias. A non-parametric model doesn't assume a fixed form and can grow in complexity as more data is added, like K-Nearest Neighbors or Decision Trees, where the model structure depends on the data itself. Parametric models are generally faster and simpler but may underfit complex data, while non-parametric models are more flexible but can require more data and computation.",
+    "key_concepts": [
+      "parametric",
+      "non-parametric",
+      "fixed parameters",
+      "flexible",
+      "model complexity"
+    ]
+  },
+  {
+    "skill": "Machine Learning",
+    "question": "Why is feature scaling important and which algorithms need it?",
+    "ideal_answer": "Feature scaling involves transforming numerical features to a similar range, typically using techniques like standardization (mean 0, standard deviation 1) or normalization (scaling to 0-1). It's important because algorithms that rely on distances, like K-Nearest Neighbors and K-Means clustering, or gradient-based algorithms like Linear and Logistic Regression and Neural Networks, can be biased toward features with larger ranges or converge slowly without scaling. Tree-based models like Decision Trees and Random Forest generally don't require scaling since they split based on thresholds rather than distances.",
+    "key_concepts": [
+      "feature scaling",
+      "standardization",
+      "normalization",
+      "distance-based",
+      "convergence"
+    ]
+  },
+  {
+    "skill": "Machine Learning",
+    "question": "What is a confusion matrix?",
+    "ideal_answer": "A confusion matrix is a table used to evaluate the performance of a classification model by comparing predicted labels against actual labels. It has four components for binary classification: true positives, where the model correctly predicted the positive class; true negatives, where it correctly predicted the negative class; false positives, where it incorrectly predicted positive; and false negatives, where it incorrectly predicted negative. From this, metrics like precision, recall, and F1-score can be calculated.",
+    "key_concepts": [
+      "true positive",
+      "false positive",
+      "true negative",
+      "false negative",
+      "evaluation"
+    ]
+  },
+  {
+    "skill": "Machine Learning",
+    "question": "What is regularization and what is the difference between L1 and L2 regularization?",
+    "ideal_answer": "Regularization is a technique used to prevent overfitting by adding a penalty term to the loss function based on the size of the model's coefficients. L1 regularization, also called Lasso, adds the absolute value of coefficients as the penalty, which can shrink some coefficients to exactly zero, effectively performing feature selection. L2 regularization, also called Ridge, adds the squared value of coefficients as the penalty, which shrinks coefficients toward zero but rarely to exactly zero, keeping all features but reducing their impact.",
+    "key_concepts": [
+      "regularization",
+      "L1",
+      "L2",
+      "Lasso",
+      "Ridge"
+    ]
+  },
+  {
+    "skill": "Machine Learning",
+    "question": "What is a neural network and what role do activation functions play?",
+    "ideal_answer": "A neural network is a model made up of layers of interconnected nodes, called neurons, inspired loosely by the human brain, where each connection has a weight that's adjusted during training. Activation functions, like ReLU, Sigmoid, or Softmax, are applied to the output of each neuron to introduce non-linearity into the network. Without activation functions, a neural network would just be performing repeated linear transformations, regardless of how many layers it has, limiting it to learning only linear relationships.",
+    "key_concepts": [
+      "neural network",
+      "neurons",
+      "activation function",
+      "non-linearity",
+      "weights"
+    ]
+  },
+  {
+    "skill": "Data Structures & Algorithms",
+    "question": "What is the difference between an array and a linked list?",
+    "ideal_answer": "An array stores elements in contiguous memory locations with a fixed size, allowing fast access to any element using its index in constant time. A linked list stores elements in nodes, where each node contains data and a pointer to the next node, allowing dynamic resizing but requiring sequential traversal to access an element, taking linear time. Arrays are better for fast random access, while linked lists are better when frequent insertions or deletions are needed.",
+    "key_concepts": [
+      "array",
+      "linked list",
+      "contiguous memory",
+      "fixed size",
+      "traversal"
+    ]
+  },
+  {
+    "skill": "Data Structures & Algorithms",
+    "question": "What is the time complexity of binary search and how does it work?",
+    "ideal_answer": "Binary search has a time complexity of O(log n), where n is the number of elements, because it repeatedly divides the search space in half. It works on a sorted array by comparing the target value to the middle element: if the target is smaller, the search continues on the left half; if larger, it continues on the right half; this repeats until the element is found or the search space becomes empty. This is much faster than linear search's O(n) for large datasets.",
+    "key_concepts": [
+      "binary search",
+      "O(log n)",
+      "sorted array",
+      "divide",
+      "time complexity"
+    ]
+  },
+  {
+    "skill": "Data Structures & Algorithms",
+    "question": "What is a stack and where is it used?",
+    "ideal_answer": "A stack is a linear data structure that follows the Last In First Out (LIFO) principle, meaning the last element added is the first one to be removed. The main operations are push, to add an element to the top, and pop, to remove the top element. Stacks are used in scenarios like function call management in programming (the call stack), undo operations in editors, and checking for balanced parentheses in expressions.",
+    "key_concepts": [
+      "stack",
+      "LIFO",
+      "push",
+      "pop",
+      "call stack"
+    ]
+  },
+  {
+    "skill": "Data Structures & Algorithms",
+    "question": "What is a queue and how is it different from a stack?",
+    "ideal_answer": "A queue is a linear data structure that follows the First In First Out (FIFO) principle, meaning the first element added is the first one removed, with operations called enqueue, to add elements at the rear, and dequeue, to remove elements from the front. This is different from a stack, which follows LIFO, removing the most recently added element first. Queues are commonly used in scenarios like task scheduling, handling requests in order, or breadth-first search in graphs.",
+    "key_concepts": [
+      "queue",
+      "FIFO",
+      "enqueue",
+      "dequeue",
+      "stack"
+    ]
+  },
+  {
+    "skill": "Data Structures & Algorithms",
+    "question": "What is the difference between Breadth-First Search (BFS) and Depth-First Search (DFS)?",
+    "ideal_answer": "BFS explores a graph or tree level by level, visiting all neighbors of a node before moving to the next level, and is typically implemented using a queue. DFS explores as far as possible along one branch before backtracking, and is typically implemented using a stack or recursion. BFS is often used to find the shortest path in unweighted graphs, while DFS is used for tasks like detecting cycles or exploring all possible paths.",
+    "key_concepts": [
+      "BFS",
+      "DFS",
+      "queue",
+      "stack",
+      "graph traversal"
+    ]
+  },
+  {
+    "skill": "Data Structures & Algorithms",
+    "question": "What is recursion and what are its key components?",
+    "ideal_answer": "Recursion is a programming technique where a function calls itself to solve smaller instances of the same problem. It has two key components: a base case, which is the condition that stops the recursion to prevent infinite calls, and a recursive case, where the function calls itself with a smaller or simpler input that moves toward the base case. A classic example is calculating factorial, where factorial(n) equals n times factorial(n-1), with factorial(0) as the base case.",
+    "key_concepts": [
+      "recursion",
+      "base case",
+      "recursive case",
+      "function calls itself",
+      "factorial"
+    ]
+  },
+  {
+    "skill": "Data Structures & Algorithms",
+    "question": "What is the time complexity of common sorting algorithms like Bubble Sort, Merge Sort, and Quick Sort?",
+    "ideal_answer": "Bubble Sort has a time complexity of O(n squared) in the average and worst cases because it repeatedly compares and swaps adjacent elements. Merge Sort has a time complexity of O(n log n) in all cases because it consistently divides the array in half and merges sorted halves. Quick Sort also has an average time complexity of O(n log n) due to its divide-and-conquer approach using a pivot, but its worst case can be O(n squared) if the pivot choices are poor, such as with an already sorted array.",
+    "key_concepts": [
+      "Bubble Sort",
+      "Merge Sort",
+      "Quick Sort",
+      "O(n log n)",
+      "time complexity"
+    ]
+  },
+  {
+    "skill": "Data Structures & Algorithms",
+    "question": "What is a hash table and how does it achieve fast lookups?",
+    "ideal_answer": "A hash table is a data structure that stores key-value pairs and uses a hash function to convert each key into an index in an underlying array, where the corresponding value is stored. This allows average-case constant time, O(1), for insertion, deletion, and lookup operations, since the hash function directly computes where to look. However, if multiple keys hash to the same index, called a collision, techniques like chaining or open addressing are used to handle it, which can affect performance.",
+    "key_concepts": [
+      "hash table",
+      "hash function",
+      "key-value",
+      "O(1)",
+      "collision"
+    ]
+  },
+  {
+    "skill": "Data Structures & Algorithms",
+    "question": "What is a binary tree and what is the difference between a binary tree and a binary search tree?",
+    "ideal_answer": "A binary tree is a tree data structure where each node has at most two children, commonly referred to as the left and right child. A binary search tree (BST) is a special type of binary tree where, for every node, all values in the left subtree are smaller and all values in the right subtree are larger than that node's value. This ordering property in a BST allows for efficient searching, insertion, and deletion, typically in O(log n) time for a balanced tree.",
+    "key_concepts": [
+      "binary tree",
+      "binary search tree",
+      "left subtree",
+      "right subtree",
+      "ordering"
+    ]
+  },
+  {
+    "skill": "Data Structures & Algorithms",
+    "question": "What is dynamic programming and how is it different from recursion?",
+    "ideal_answer": "Dynamic programming is an optimization technique used to solve problems by breaking them into overlapping subproblems and storing the results of these subproblems to avoid recomputing them, a process called memoization, or by building up solutions iteratively, called tabulation. While regular recursion may solve the same subproblem multiple times leading to exponential time complexity, dynamic programming reuses previously computed results, often reducing time complexity significantly, such as turning an exponential Fibonacci calculation into a linear one.",
+    "key_concepts": [
+      "dynamic programming",
+      "overlapping subproblems",
+      "memoization",
+      "recursion",
+      "optimization"
+    ]
+  },
+  {
+    "skill": "Cloud",
+    "question": "What is cloud computing and what are its main service models?",
+    "ideal_answer": "Cloud computing is the delivery of computing resources like servers, storage, databases, and software over the internet, instead of owning and maintaining physical hardware. The main service models are IaaS (Infrastructure as a Service), which provides virtualized computing resources like virtual machines and storage, PaaS (Platform as a Service), which provides a platform for developers to build and deploy applications without managing underlying infrastructure, and SaaS (Software as a Service), which delivers fully functional software applications over the internet, like Gmail or Salesforce.",
+    "key_concepts": [
+      "cloud computing",
+      "IaaS",
+      "PaaS",
+      "SaaS",
+      "internet"
+    ]
+  },
+  {
+    "skill": "Cloud",
+    "question": "What is the difference between public, private, and hybrid cloud?",
+    "ideal_answer": "A public cloud is owned and operated by a third-party provider, like AWS or Azure, and resources are shared among multiple customers over the internet. A private cloud is dedicated to a single organization, either hosted on-premises or by a third party, offering more control and security but at higher cost. A hybrid cloud combines both, allowing data and applications to move between private and public environments, giving organizations flexibility, such as keeping sensitive data on a private cloud while using public cloud for scalable workloads.",
+    "key_concepts": [
+      "public cloud",
+      "private cloud",
+      "hybrid cloud",
+      "shared resources",
+      "AWS"
+    ]
+  },
+  {
+    "skill": "Cloud",
+    "question": "What is virtualization and why is it important in cloud computing?",
+    "ideal_answer": "Virtualization is the technology that allows creating multiple virtual instances, like virtual machines, on a single physical hardware resource, with each virtual machine operating independently with its own operating system. It's important in cloud computing because it enables resource sharing and isolation, allowing cloud providers to maximize hardware utilization by running many customers' workloads on the same physical servers while keeping them securely separated from each other.",
+    "key_concepts": [
+      "virtualization",
+      "virtual machine",
+      "isolation",
+      "resource sharing",
+      "hardware"
+    ]
+  },
+  {
+    "skill": "Cloud",
+    "question": "What is auto-scaling in cloud computing?",
+    "ideal_answer": "Auto-scaling is a feature that automatically adjusts the number of computing resources, like virtual machine instances, allocated to an application based on current demand. When traffic increases, auto-scaling adds more instances to handle the load, and when traffic decreases, it removes unnecessary instances to save costs. This ensures applications can handle varying workloads efficiently without requiring manual intervention, while optimizing resource usage and cost.",
+    "key_concepts": [
+      "auto-scaling",
+      "instances",
+      "demand",
+      "cost optimization",
+      "automatic"
+    ]
+  },
+  {
+    "skill": "Cloud",
+    "question": "What is the difference between horizontal and vertical scaling?",
+    "ideal_answer": "Vertical scaling, also called scaling up, means increasing the resources of an existing server, such as adding more CPU or RAM to a single machine. Horizontal scaling, also called scaling out, means adding more machines or instances to distribute the load across multiple servers. Horizontal scaling is generally preferred in cloud environments because it offers better fault tolerance and can scale almost limitlessly, while vertical scaling has hardware limits on a single machine.",
+    "key_concepts": [
+      "vertical scaling",
+      "horizontal scaling",
+      "scale up",
+      "scale out",
+      "fault tolerance"
+    ]
+  },
+  {
+    "skill": "Cloud",
+    "question": "What is a load balancer and why is it used?",
+    "ideal_answer": "A load balancer is a service that distributes incoming network traffic across multiple servers to ensure no single server becomes overwhelmed, improving application availability and responsiveness. It can also perform health checks, automatically routing traffic away from servers that are down or unhealthy. Load balancers are essential for high-traffic applications, enabling horizontal scaling and providing redundancy in case individual servers fail.",
+    "key_concepts": [
+      "load balancer",
+      "distribute traffic",
+      "availability",
+      "health checks",
+      "redundancy"
+    ]
+  },
+  {
+    "skill": "Cloud",
+    "question": "What is the purpose of containers and how do they differ from virtual machines?",
+    "ideal_answer": "Containers package an application along with its dependencies and configuration into a single lightweight unit that can run consistently across different environments. Unlike virtual machines, which each include a full operating system and can be resource-heavy, containers share the host operating system's kernel, making them much lighter and faster to start. Docker is a popular tool for creating containers, and they're widely used for deploying microservices and ensuring consistency between development and production environments.",
+    "key_concepts": [
+      "containers",
+      "virtual machines",
+      "Docker",
+      "lightweight",
+      "dependencies"
+    ]
+  },
+  {
+    "skill": "Cloud",
+    "question": "What is the purpose of an API and how is it used in cloud applications?",
+    "ideal_answer": "An API, or Application Programming Interface, is a set of rules that allows different software applications to communicate with each other. In cloud applications, APIs are commonly used to access cloud services, like storage or databases, programmatically, allowing developers to integrate cloud functionality into their applications without manual configuration. REST APIs, which use HTTP methods like GET, POST, PUT, and DELETE, are especially common in cloud architectures.",
+    "key_concepts": [
+      "API",
+      "communication",
+      "REST",
+      "cloud services",
+      "HTTP methods"
+    ]
+  },
+  {
+    "skill": "OOP",
+    "question": "What is a class and an object in object-oriented programming?",
+    "ideal_answer": "A class is a blueprint or template that defines the properties, called attributes, and behaviors, called methods, that objects created from it will have. An object is an instance of a class, meaning it's a concrete entity created based on the class's blueprint, with its own specific values for the attributes defined in the class. For example, 'Car' could be a class defining attributes like color and speed, while a specific red car would be an object of that class.",
+    "key_concepts": [
+      "class",
+      "object",
+      "blueprint",
+      "attributes",
+      "methods"
+    ]
+  },
+  {
+    "skill": "OOP",
+    "question": "What is encapsulation and why is it important?",
+    "ideal_answer": "Encapsulation is the practice of bundling data and the methods that operate on that data within a single unit, called a class, while restricting direct access to some of the object's internal details. This is typically achieved by making attributes private and providing public getter and setter methods to access or modify them in a controlled way. It's important because it protects data from unintended changes, improves security, and allows the internal implementation to change without affecting code that uses the class.",
+    "key_concepts": [
+      "encapsulation",
+      "private attributes",
+      "getters and setters",
+      "data protection",
+      "class"
+    ]
+  },
+  {
+    "skill": "OOP",
+    "question": "What is inheritance and what are its benefits?",
+    "ideal_answer": "Inheritance is an OOP concept where a new class, called a subclass or child class, can inherit attributes and methods from an existing class, called a superclass or parent class. The main benefits are code reusability, since common functionality is defined once in the parent class and reused by child classes, and the ability to extend or modify behavior in child classes without changing the parent. For example, a 'Vehicle' class could be a parent for 'Car' and 'Bike' subclasses, which inherit common attributes like speed and add their own specific ones.",
+    "key_concepts": [
+      "inheritance",
+      "subclass",
+      "superclass",
+      "code reusability",
+      "extend"
+    ]
+  },
+  {
+    "skill": "OOP",
+    "question": "What is polymorphism and what are its types?",
+    "ideal_answer": "Polymorphism means 'many forms', and refers to the ability of different objects to respond to the same method call in different ways. There are two main types: compile-time polymorphism, achieved through method overloading, where multiple methods have the same name but different parameters; and runtime polymorphism, achieved through method overriding, where a subclass provides a different implementation for a method already defined in its parent class. This allows code to be more flexible and extensible.",
+    "key_concepts": [
+      "polymorphism",
+      "method overloading",
+      "method overriding",
+      "many forms",
+      "flexible"
+    ]
+  },
+  {
+    "skill": "OOP",
+    "question": "What is abstraction in OOP and how is it achieved?",
+    "ideal_answer": "Abstraction is the concept of hiding complex implementation details and showing only the essential features or functionality of an object to the user. In OOP, abstraction is typically achieved using abstract classes, which cannot be instantiated directly and may contain abstract methods that must be implemented by subclasses, or interfaces, which define a contract of methods that implementing classes must provide. This allows developers to focus on what an object does rather than how it does it.",
+    "key_concepts": [
+      "abstraction",
+      "abstract class",
+      "interface",
+      "hide details",
+      "essential features"
+    ]
+  },
+  {
+    "skill": "OOP",
+    "question": "What is the difference between composition and inheritance?",
+    "ideal_answer": "Inheritance represents an 'is-a' relationship, where a subclass is a more specific type of its parent class, like a 'Car is a Vehicle'. Composition represents a 'has-a' relationship, where a class contains an instance of another class as a field, like a 'Car has an Engine'. Composition is often preferred over inheritance in many situations because it provides more flexibility, allows behavior to be changed at runtime, and avoids issues like tight coupling that can arise from deep inheritance hierarchies.",
+    "key_concepts": [
+      "composition",
+      "inheritance",
+      "is-a",
+      "has-a",
+      "flexibility"
+    ]
+  },
+  {
+    "skill": "OOP",
+    "question": "What is a constructor and why is it used?",
+    "ideal_answer": "A constructor is a special method that is automatically called when an object of a class is created, and it's used to initialize the object's attributes with starting values. Constructors have the same name as the class and typically don't return a value. They ensure that an object starts in a valid, properly initialized state, and can also accept parameters to allow different initial configurations for different objects, known as parameterized constructors.",
+    "key_concepts": [
+      "constructor",
+      "initialize",
+      "object creation",
+      "same name as class",
+      "parameters"
+    ]
+  },
+  {
+    "skill": "OOP",
+    "question": "What does 'this' or 'self' refer to in object-oriented programming?",
+    "ideal_answer": "'this' (in languages like Java) or 'self' (in Python) is a reference to the current instance of the class, the object on which a method is being called. It's used inside methods to access the object's own attributes and other methods, especially to distinguish between instance variables and local variables or parameters that might have the same name. For example, 'self.name = name' assigns the parameter 'name' to the object's own 'name' attribute.",
+    "key_concepts": [
+      "this",
+      "self",
+      "current instance",
+      "instance variables",
+      "reference to object"
+    ]
+  },
+  {
+    "skill": "DBMS",
+    "question": "What is a join and why do we need it if we could store all data in one big table?",
+    "ideal_answer": "A join combines rows from two or more tables based on a related column, like a foreign key, allowing us to query data spread across multiple tables as if it were one. We use multiple tables instead of one big table mainly due to normalization, which reduces data redundancy and improves consistency, but this means related information is split across tables. Joins let us bring that split data back together when needed, like combining customer details with their orders.",
+    "key_concepts": [
+      "join",
+      "foreign key",
+      "normalization",
+      "redundancy",
+      "multiple tables"
+    ]
+  },
+  {
+    "skill": "DBMS",
+    "question": "What is database indexing and what is the trade-off involved?",
+    "ideal_answer": "Database indexing creates an additional data structure, often a B-tree, that maps column values to their locations in a table, allowing the database to find rows much faster than scanning the whole table. The trade-off is that while indexes speed up read operations like SELECT queries, they slow down write operations like INSERT, UPDATE, and DELETE, because the index itself needs to be updated whenever data changes. Indexes also consume additional storage space.",
+    "key_concepts": [
+      "indexing",
+      "B-tree",
+      "read performance",
+      "write performance",
+      "storage"
+    ]
+  },
+  {
+    "skill": "DBMS",
+    "question": "What is the difference between a stored procedure and a function in SQL?",
+    "ideal_answer": "A stored procedure is a precompiled set of SQL statements that can perform actions like inserting, updating, or deleting data, and can return zero, one, or multiple values, but cannot be used directly in a SELECT statement. A function, on the other hand, must return a single value and can be used within SQL expressions, like in a SELECT statement, but typically cannot modify data in tables. Both help encapsulate logic on the database side, improving reusability and sometimes performance.",
+    "key_concepts": [
+      "stored procedure",
+      "function",
+      "return value",
+      "precompiled",
+      "SELECT statement"
+    ]
+  },
+  {
+    "skill": "Data Structures & Algorithms",
+    "question": "What is the difference between Big O notation best case, average case, and worst case?",
+    "ideal_answer": "Big O notation describes how an algorithm's running time or space requirements grow as the input size increases. Best case represents the minimum time an algorithm takes, often for already favorable input, like a sorted array for insertion sort. Worst case represents the maximum time, often used as the standard for guarantees, like O(n squared) for bubble sort on a reverse-sorted array. Average case represents the expected time over typical inputs, which is often harder to calculate but more representative of real-world usage.",
+    "key_concepts": [
+      "Big O",
+      "best case",
+      "average case",
+      "worst case",
+      "running time"
+    ]
+  },
+  {
+    "skill": "Data Structures & Algorithms",
+    "question": "What is a graph and how is it typically represented in code?",
+    "ideal_answer": "A graph is a data structure consisting of a set of nodes, called vertices, connected by edges, which can represent relationships like roads between cities or connections between people in a social network. Graphs can be directed, where edges have a direction, or undirected, where they don't. They're typically represented in code using an adjacency list, where each vertex stores a list of its connected vertices, or an adjacency matrix, a 2D array where each cell indicates whether an edge exists between two vertices.",
+    "key_concepts": [
+      "graph",
+      "vertices",
+      "edges",
+      "adjacency list",
+      "adjacency matrix"
+    ]
+  },
+  {
+    "skill": "Cloud",
+    "question": "What is serverless computing?",
+    "ideal_answer": "Serverless computing is a cloud execution model where the cloud provider automatically manages the infrastructure needed to run code, and developers only need to write and deploy functions without worrying about servers, scaling, or maintenance. Despite the name, servers are still involved, but they're completely abstracted away from the developer. Pricing is usually based on actual execution time and resources used, rather than pre-allocated capacity, making it cost-effective for workloads with variable or unpredictable traffic.",
+    "key_concepts": [
+      "serverless",
+      "functions",
+      "no server management",
+      "pay per use",
+      "abstraction"
+    ]
+  },
+  {
+    "skill": "Cloud",
+    "question": "What is the difference between cloud storage types like object storage, block storage, and file storage?",
+    "ideal_answer": "Object storage stores data as discrete units called objects, each with metadata and a unique identifier, and is ideal for unstructured data like images, videos, and backups, accessed via APIs. Block storage divides data into fixed-size blocks and is typically used for databases or applications requiring high performance and low latency, similar to a traditional hard drive. File storage organizes data in a hierarchical structure of files and folders, accessible over a network, suitable for shared file access across multiple systems.",
+    "key_concepts": [
+      "object storage",
+      "block storage",
+      "file storage",
+      "unstructured data",
+      "metadata"
+    ]
+  },
+  {
+    "skill": "OOP",
+    "question": "What is method overriding and what rules must be followed?",
+    "ideal_answer": "Method overriding occurs when a subclass provides its own implementation of a method that is already defined in its parent class, with the same name, return type, and parameters. The overriding method in the subclass must have the same signature as the method in the parent class, and its access level cannot be more restrictive than the parent's method. This allows the subclass to customize or extend the behavior inherited from the parent while maintaining a consistent interface.",
+    "key_concepts": [
+      "method overriding",
+      "same signature",
+      "subclass",
+      "parent class",
+      "access level"
+    ]
+  },
+  {
+    "skill": "OOP",
+    "question": "Why is multiple inheritance problematic in some languages, and how do interfaces help?",
+    "ideal_answer": "Multiple inheritance, where a class inherits from more than one parent class, can lead to the 'diamond problem', where ambiguity arises if two parent classes have a method with the same name and the child class doesn't specify which one to use. Languages like Java avoid this by not allowing multiple inheritance of classes, but they do allow a class to implement multiple interfaces, since interfaces traditionally only declare method signatures without implementation, avoiding the ambiguity of conflicting implementations.",
+    "key_concepts": [
+      "multiple inheritance",
+      "diamond problem",
+      "interfaces",
+      "ambiguity",
+      "method signatures"
+    ]
+  }
+]

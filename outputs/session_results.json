@@ -1,0 +1,42 @@
+{
+  "summary": {
+    "questions_attempted": 2,
+    "avg_overall_score": 40.64,
+    "avg_relevance": 33.17,
+    "avg_completeness": 10.0,
+    "total_fillers": 0,
+    "performance_label": "Needs improvement. Practice answering with more complete technical explanations."
+  },
+  "detailed_results": [
+    {
+      "question": "What are the different types of JOINs in SQL?",
+      "skill": "SQL",
+      "relevance_score": 66.34,
+      "completeness_score": 20.0,
+      "spelling_score": 100,
+      "filler_word_count": 0,
+      "overall_score": 58.54,
+      "feedback": [
+        "Your answer is somewhat relevant but could be more focused.",
+        "Missing several important concepts: LEFT JOIN, RIGHT JOIN, FULL OUTER JOIN, matching. Include these in your answer.",
+        "Excellent \u2014 no filler words used!",
+        "No spelling issues detected."
+      ]
+    },
+    {
+      "question": "What is the difference between a clustered and a non-clustered index?",
+      "skill": "SQL",
+      "relevance_score": 0,
+      "completeness_score": 0.0,
+      "spelling_score": 85,
+      "filler_word_count": 0,
+      "overall_score": 22.75,
+      "feedback": [
+        "Your answer doesn't closely address the question. Try again.",
+        "Missing several important concepts: clustered index, non-clustered index, physical order, primary key, lookup. Include these in your answer.",
+        "Excellent \u2014 no filler words used!",
+        "Some spelling issues detected. Review your answer."
+      ]
+    }
+  ]
+}
